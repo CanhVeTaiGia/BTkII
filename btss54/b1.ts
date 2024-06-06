@@ -15,4 +15,3 @@ function calculateBMI(weight: any, height: any): number | string{
 console.log(calculateBMI(70, 1.75));
 console.log(calculateBMI(70, '1.75'));
 console.log(calculateBMI(70, -1.75));
-
