@@ -9,7 +9,6 @@ function findElement(arr: number[], value: number): Promise<number> {
     });
 }
 
-// Ví dụ sử dụng:
 findElement([1, 2, 3, 4, 5], 3)
     .then(result => {
         console.log("Phần tử tìm thấy:", result);
