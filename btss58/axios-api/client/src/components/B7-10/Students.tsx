@@ -2,7 +2,7 @@ import AddStudent from "./AddStudent";
 import DeleteStudent from "./DeleteStudent";
 import UpdateStudent from "./UpdateStudent";
 
-const Bt78910 = () => {
+const Students = () => {
   return (
     <div>
       <AddStudent />
@@ -12,4 +12,4 @@ const Bt78910 = () => {
   );
 };
 
-export default Bt78910;
+export default Students;
