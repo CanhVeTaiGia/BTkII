@@ -1,0 +1,14 @@
+{
+  "jobs": [
+    {
+      "id": 2,
+      "name": "Rửa bát",
+      "status": false
+    },
+    {
+      "id": 3,
+      "name": "Nấu cơm",
+      "status": false
+    }
+  ]
+}

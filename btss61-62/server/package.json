@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "json-server": "^0.17.4"
+  },
+  "scripts": {
+    "start": "json-server --w --port 8080 mock-api/db.json"
+  }
+}
