@@ -5,7 +5,7 @@ export interface BookInterface{
     name: string,
     studentName: string,
     loanDate: string,
-    payDate: string
+    payDate: string,
     status: boolean
 }
 

@@ -10,32 +10,33 @@ interface Props {
 }
 
 export const Book: React.FC<Props> = ({ book, index }: Props) => {
-  const bookState = useSelector((state: RootType) => {
-    return state.bookReducer;
-  });
   const dispatch = useDispatch();
   const [showForm, setShowForm] = useState<boolean>(false);
-  
+
   const hideForm = () => {
     setShowForm(false);
   };
 
   const changeStatus = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const updatedBook = { ...book, status: e.target.value === "done" };
-    dispatch(action("CHANGESTATUS", updatedBook));
+    dispatch(action("CHANGESTATUS", updatedBook.id));
   };
 
   const handleDelete = (id: number) => {
     dispatch(action("DELETEBOOK", id));
-  }
+  };
   return (
     <>
       <tr>
         <td className="py-[5px] border-[1px] text-center">{index + 1}</td>
         <td className="py-[5px] border-[1px] pl-[10px]">{book.name}</td>
         <td className="py-[5px] border-[1px] pl-[10px]">{book.studentName}</td>
-        <td className="py-[5px] border-[1px] pl-[10px]">{book.loanDate}</td>
-        <td className="py-[5px] border-[1px] pl-[10px]">{book.payDate}</td>
+        <td className="py-[5px] border-[1px] pl-[10px]">
+          {book.loanDate.split("-").reverse().join("-")}
+        </td>
+        <td className="py-[5px] border-[1px] pl-[10px]">
+          {book.payDate.split("-").reverse().join("-")}
+        </td>
         <td className="py-[5px] border-[1px] pl-[10px]">
           <select
             onChange={changeStatus}
@@ -59,7 +60,10 @@ export const Book: React.FC<Props> = ({ book, index }: Props) => {
           >
             Sửa
           </button>
-          <button onClick={() => handleDelete(book.id)} className="w-[60px] rounded-[5px] border-[1px] text-[#f00] border-red-500 h-[25px] bg-red-200">
+          <button
+            onClick={() => handleDelete(book.id)}
+            className="w-[60px] rounded-[5px] border-[1px] text-[#f00] border-red-500 h-[25px] bg-red-200"
+          >
             Xóa
           </button>
         </td>

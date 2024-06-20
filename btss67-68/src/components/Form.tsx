@@ -1,4 +1,4 @@
-import React, { useState, FormEvent } from "react";
+import React, { useState, FormEvent, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { BookInterface, RootType } from "../interface/interface";
 
@@ -8,7 +8,13 @@ interface FormProps {
   isEdit: boolean;
 }
 
-export const Form: React.FC<FormProps> = ({ book, hideForm, isEdit }: FormProps) => {
+export const Form: React.FC<FormProps> = ({
+  book,
+  hideForm,
+  isEdit,
+}: FormProps) => {
+  const [minDate, setMinDate] = useState<string>("");
+  const [newMinDate, setNewMinDate] = useState<string>("");
   const dispatch = useDispatch();
   const initialBookState = book || {
     id: Date.now(),
@@ -22,6 +28,7 @@ export const Form: React.FC<FormProps> = ({ book, hideForm, isEdit }: FormProps)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
+    setMinDate(minDate);
     setFormBook({
       ...formBook,
       [name]: value,
@@ -47,6 +54,11 @@ export const Form: React.FC<FormProps> = ({ book, hideForm, isEdit }: FormProps)
     hideForm();
   };
 
+  useEffect(() => {
+    let newDate = new Date().toISOString().split("T")[0];
+    setMinDate(newDate);
+  });
+
   return (
     <div className="absolute w-[100%] h-[100vh] flex justify-center items-center bg-[#00000055] top-0 right-0">
       <form
@@ -54,7 +66,9 @@ export const Form: React.FC<FormProps> = ({ book, hideForm, isEdit }: FormProps)
         className="w-[600px] p-[30px] bg-white border-[1px] rounded-[10px]"
       >
         <h2 className="w-[100%] flex justify-between mb-[10px]">
-          <p className="text-[24px]">{isEdit ? "Sửa thông tin mượn sách" : "Thêm thông tin mượn sách"}</p>
+          <p className="text-[24px]">
+            {isEdit ? "Sửa thông tin mượn sách" : "Thêm thông tin mượn sách"}
+          </p>
           <p onClick={hideForm} className="text-[24px] cursor-pointer">
             X
           </p>
@@ -82,6 +96,7 @@ export const Form: React.FC<FormProps> = ({ book, hideForm, isEdit }: FormProps)
           name="loanDate"
           className="w-[100%] rounded-[5px] h-[40px] pl-[10px] outline-none border-[1px] mb-[20px]"
           type="date"
+          min={minDate}
         />
         <label className="inline-block mb-[10px]">Ngày trả</label>
         <input
@@ -90,6 +105,7 @@ export const Form: React.FC<FormProps> = ({ book, hideForm, isEdit }: FormProps)
           name="payDate"
           className="w-[100%] rounded-[5px] h-[40px] pl-[10px] outline-none border-[1px] mb-[20px]"
           type="date"
+          min={newMinDate}
         />
         <button
           type="submit"
