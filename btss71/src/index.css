@@ -1,0 +1,20 @@
+
+:root {
+    --background-color: white;
+    --text-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+  
+.dark-mode {
+    --background-color: black;
+    --text-color: white;
+}
+  
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
