@@ -5,6 +5,7 @@ import TaskFilter from "./TaskFilter";
 import { getAllTask, TaskType } from "./TaskService";
 import DeleteCompletedAndAll from "./DeleteCompletedAndAll";
 import Loading from "./Loading";
+import { CompletedAllTask } from "./Modal";
 
 export default function Tasks() {
   // Hàm lưu trữ công việc
@@ -32,9 +33,9 @@ export default function Tasks() {
     fetchTasks();
   }, []);
 
-  useEffect(() => {
-    fetchTasks();
-  }, [tasks]);
+  // useEffect(() => {
+    // fetchTasks();
+  // }, [tasks]);
 
   useEffect(() => {
     setTimeout(() => {
@@ -63,6 +64,7 @@ export default function Tasks() {
         </div>
         <DeleteCompletedAndAll />
       </div>
+      <CompletedAllTask tasks={tasks}/>
     </>
   );
 }

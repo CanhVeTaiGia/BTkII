@@ -1,0 +1,144 @@
+{
+  "posts": [
+    {
+        "id": 1,
+        "title": "Bài viết số 1",
+        "image": "duongdananh1.jpg",
+        "date": "14/06/2023",
+        "status": true
+    },
+    {
+        "id": 2,
+        "title": "Bài viết số 2",
+        "image": "duongdananh2.jpg",
+        "date": "15/06/2023",
+        "status": false
+    },
+    {
+        "id": 3,
+        "title": "Bài viết số 3",
+        "image": "duongdananh3.jpg",
+        "date": "16/06/2023",
+        "status": true
+    },
+    {
+        "id": 4,
+        "title": "Bài viết số 4",
+        "image": "duongdananh4.jpg",
+        "date": "17/06/2023",
+        "status": false
+    },
+    {
+        "id": 5,
+        "title": "Bài viết số 5",
+        "image": "duongdananh5.jpg",
+        "date": "18/06/2023",
+        "status": true
+    },
+    {
+        "id": 6,
+        "title": "Bài viết số 6",
+        "image": "duongdananh6.jpg",
+        "date": "19/06/2023",
+        "status": false
+    },
+    {
+        "id": 7,
+        "title": "Bài viết số 7",
+        "image": "duongdananh7.jpg",
+        "date": "20/06/2023",
+        "status": true
+    },
+    {
+        "id": 8,
+        "title": "Bài viết số 8",
+        "image": "duongdananh8.jpg",
+        "date": "21/06/2023",
+        "status": false
+    },
+    {
+        "id": 9,
+        "title": "Bài viết số 9",
+        "image": "duongdananh9.jpg",
+        "date": "22/06/2023",
+        "status": true
+    },
+    {
+        "id": 10,
+        "title": "Bài viết số 10",
+        "image": "duongdananh10.jpg",
+        "date": "23/06/2023",
+        "status": false
+    },
+    {
+        "id": 11,
+        "title": "Bài viết số 11",
+        "image": "duongdananh11.jpg",
+        "date": "24/06/2023",
+        "status": true
+    },
+    {
+        "id": 12,
+        "title": "Bài viết số 12",
+        "image": "duongdananh12.jpg",
+        "date": "25/06/2023",
+        "status": false
+    },
+    {
+        "id": 13,
+        "title": "Bài viết số 13",
+        "image": "duongdananh13.jpg",
+        "date": "26/06/2023",
+        "status": true
+    },
+    {
+        "id": 14,
+        "title": "Bài viết số 14",
+        "image": "duongdananh14.jpg",
+        "date": "27/06/2023",
+        "status": false
+    },
+    {
+        "id": 15,
+        "title": "Bài viết số 15",
+        "image": "duongdananh15.jpg",
+        "date": "28/06/2023",
+        "status": true
+    },
+    {
+        "id": 16,
+        "title": "Bài viết số 16",
+        "image": "duongdananh16.jpg",
+        "date": "29/06/2023",
+        "status": false
+    },
+    {
+        "id": 17,
+        "title": "Bài viết số 17",
+        "image": "duongdananh17.jpg",
+        "date": "30/06/2023",
+        "status": true
+    },
+    {
+        "id": 18,
+        "title": "Bài viết số 18",
+        "image": "duongdananh18.jpg",
+        "date": "01/07/2023",
+        "status": false
+    },
+    {
+        "id": 19,
+        "title": "Bài viết số 19",
+        "image": "duongdananh19.jpg",
+        "date": "02/07/2023",
+        "status": true
+    },
+    {
+        "id": 20,
+        "title": "Bài viết số 20",
+        "image": "duongdananh20.jpg",
+        "date": "03/07/2023",
+        "status": false
+    }
+  ]
+}
