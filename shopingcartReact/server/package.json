@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "init": "^0.1.2",
+    "json-server": "^0.17.4"
+  },
+  "scripts": {
+    "start": "json-server --w --port 8080 db.json"
+  }
+}
